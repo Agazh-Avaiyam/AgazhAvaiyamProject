@@ -16,6 +16,6 @@ export default defineConfig({
       robots: [{ userAgent: '*', allow: '/' }] // This also generates robots.txt in dist automatically
     })
   ],
-  base: '/agazhproject/',
+  base: '/',
 })
 
