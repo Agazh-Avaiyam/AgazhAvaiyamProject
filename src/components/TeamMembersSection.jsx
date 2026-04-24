@@ -17,6 +17,7 @@ With hands-on experience in excavations conducted by the Tamil Nadu State Depart
 
 His research in maritime archaeology—including a dissertation on stone anchors of Dwarka, Bet Dwarka, and Somnath—reflects his deep interest in underwater cultural heritage. As a founder, he is driven to make history more engaging, accessible, and experiential for diverse audiences.`,
     index: '01',
+    imagePosition: 'center',
   },
   {
     id: 2,
@@ -169,7 +170,8 @@ const MemberCard = ({ member, onClick, isActive }) => {
             <motion.img
               src={member.image}
               alt={member.name}
-              className="w-full h-full object-cover object-top origin-bottom"
+              className="w-full h-full object-cover origin-center"
+              style={{ objectPosition: member.imagePosition || 'top' }}
               loading="lazy"
               initial={{ scale: 1.05 }}
               whileHover={{ scale: 1.12, y: -10 }}
@@ -317,7 +319,7 @@ const MemberModal = ({ member, onClose }) => {
           </button>
 
           {/* Left Image Panel */}
-          <div className="w-full md:w-[45%] relative h-[35vh] md:h-auto md:min-h-full shrink-0 bg-[#0a0503]">
+          <div className="w-full md:w-[45%] relative h-[45vh] sm:h-[50vh] md:h-auto md:min-h-full shrink-0 bg-[#0a0503]">
             <motion.div
               className="w-full h-full absolute inset-0 overflow-hidden"
               initial={{ scale: 1.1, opacity: 0 }}
@@ -327,7 +329,8 @@ const MemberModal = ({ member, onClose }) => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: member.imagePosition || 'top' }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0503] via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:via-[#0a0503]/50 md:to-[#0a0503]" />
               <div className="absolute inset-0  mix-blend-overlay opacity-30" style={{ backgroundImage: 'radial-gradient(circle, #D7CCC8 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
