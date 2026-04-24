@@ -31,5 +31,24 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Disable Inspect Element & DevTools Scripts -->
+    <script>
+      // Disable Right Click
+      document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+      // Disable specific keyboard shortcuts (F12, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+Shift+J, Ctrl+U)
+      document.addEventListener('keydown', (e) => {
+        if (
+          e.key === 'F12' || 
+          (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J')) || 
+          (e.ctrlKey && e.key === 'U') ||
+          (e.metaKey && e.altKey && (e.key === 'I' || e.key === 'C' || e.key === 'J')) || /* Mac shortcuts */
+          (e.metaKey && e.key === 'U')
+        ) {
+          e.preventDefault();
+        }
+      });
+    </script>
   </body>
 </html>
