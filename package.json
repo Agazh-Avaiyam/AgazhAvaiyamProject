@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Arundhathi27.github.io/agazhproject",
+  "homepage": "https://agazh-avaiyam.vercel.app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

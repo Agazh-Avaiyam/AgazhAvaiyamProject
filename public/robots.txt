@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://arundhathi27.github.io/agazhproject/sitemap.xml
+Sitemap: https://agazh-avaiyam.vercel.app/sitemap.xml

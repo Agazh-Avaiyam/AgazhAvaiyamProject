@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     Sitemap({
-      hostname: 'https://arundhathi27.github.io/agazhproject/',
+      hostname: 'https://agazh-avaiyam.vercel.app/',
       dynamicRoutes: [
         '/',
         '/aboutus'

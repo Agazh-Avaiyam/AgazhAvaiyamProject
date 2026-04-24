@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 const StructuredData = () => {
   const location = useLocation();
-  const baseUrl = "https://arundhathi27.github.io/agazhproject";
+  const baseUrl = "https://agazh-avaiyam.vercel.app";
 
   const organizationSchema = {
     "@context": "https://schema.org",

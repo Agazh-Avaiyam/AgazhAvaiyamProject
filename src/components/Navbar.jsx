@@ -8,7 +8,7 @@ import { createPortal } from 'react-dom';
 const smoothScrollTo = (id, e) => {
     if (e && e.preventDefault) e.preventDefault();
     if (!id || id === '#') return;
-    
+
     // Allow a small delay for page route changes before scrolling
     setTimeout(() => {
         const el = document.getElementById(id.replace('#', ''));
@@ -26,7 +26,7 @@ const Navbar = () => {
 
     const handleNavigation = (to, e) => {
         if (e) e.preventDefault();
-        
+
         if (to.startsWith('/#')) {
             const hash = to.replace('/', '');
             if (location.pathname === '/') {
@@ -52,7 +52,7 @@ const Navbar = () => {
             if (location.pathname === '/') {
                 const sections = ['home', 'events', 'contactus'];
                 let current = '';
-                
+
                 for (let sectionId of sections) {
                     const el = document.getElementById(sectionId);
                     if (el) {
@@ -63,7 +63,7 @@ const Navbar = () => {
                         }
                     }
                 }
-                
+
                 if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight - 100) {
                     current = 'contactus';
                 }
@@ -203,11 +203,10 @@ const Navbar = () => {
                                     key={link.name}
                                     to={link.to}
                                     onClick={(e) => handleNavigation(link.to, e)}
-                                    className={`relative py-2 text-xs font-bold uppercase tracking-widest transition-colors ${
-                                        scrolled 
-                                            ? (isActive ? 'text-brand-brown' : 'text-brand-dark/70 hover:text-brand-dark') 
+                                    className={`relative py-2 text-xs font-bold uppercase tracking-widest transition-colors ${scrolled
+                                            ? (isActive ? 'text-brand-brown' : 'text-brand-dark/70 hover:text-brand-dark')
                                             : (isActive ? 'text-brand-tan' : 'text-white/80 hover:text-white')
-                                    }`}
+                                        }`}
                                 >
                                     {link.name}
                                     {isActive && (
@@ -329,14 +328,6 @@ const Navbar = () => {
                                                 </a>
                                             </motion.div>
                                         </div>
-
-                                        {/* Footer Info */}
-                                        <motion.div variants={linkVariants} className="absolute bottom-8 left-8 right-8">
-                                            <div className="flex items-center gap-3 opacity-50">
-                                                <div className="w-2 h-2 rounded-full bg-brand-tan animate-pulse"></div>
-                                                <span className="text-white/60 text-[10px] uppercase tracking-widest">Based in Tamil Nadu</span>
-                                            </div>
-                                        </motion.div>
                                     </div>
                                 </motion.div>
                             </div>

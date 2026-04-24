@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 const SEOHead = ({ title, description, keywords, ogImage, ogUrl }) => {
   const siteName = "Agazh Avaiyam";
   const defaultImage = "/agazhproject/og-image.jpg";
-  const baseUrl = "https://arundhathi27.github.io/agazhproject";
+  const baseUrl = "https://agazh-avaiyam.vercel.app";
   
   const finalImage = ogImage ? `${baseUrl}${ogImage}` : `${baseUrl}${defaultImage}`;
   const finalUrl = ogUrl ? `${baseUrl}${ogUrl}` : baseUrl;
