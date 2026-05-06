@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const templeImg = `${import.meta.env.BASE_URL}images/hero_temple_ruins_1768917098837.webp`;
+const templeImg = `${import.meta.env.BASE_URL}images/About_Summary.webp`;
 
 const AboutSummary = () => {
   return (
