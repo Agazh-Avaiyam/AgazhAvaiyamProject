@@ -5,6 +5,7 @@ import Herobanner from './Herobanner'
 import Events, { PartnerWithUs } from './Events'
 import AimMission from './AimMission'
 import ContactUs from './ContactUs'
+import AboutSummary from './AboutSummary'
 import FAQ from '../components/FAQ'
 import HeritagePrograms from './HeritagePrograms'
 
@@ -19,6 +20,7 @@ const Home = () => {
       />
       <Navbar />
       <Herobanner />
+      <AboutSummary />
       <AimMission />
       <HeritagePrograms />
       <Events />
