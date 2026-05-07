@@ -50,7 +50,7 @@ const Navbar = () => {
             setScrolled(window.scrollY > heroHeight);
 
             if (location.pathname === '/') {
-                const sections = ['home', 'events', 'contactus'];
+                const sections = ['home', 'contactus'];
                 let current = '';
 
                 for (let sectionId of sections) {
@@ -132,7 +132,6 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', to: '/#home', icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' },
         { name: 'About Us', to: '/aboutus', icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
-        { name: 'Events', to: '/#events', icon: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' },
     ];
 
     return (
@@ -193,7 +192,6 @@ const Navbar = () => {
                             let isActive = false;
                             if (location.pathname === '/') {
                                 if (link.to === '/#home' && activeSection === 'home') isActive = true;
-                                if (link.to === '/#events' && activeSection === 'events') isActive = true;
                             } else {
                                 if (location.pathname === link.to) isActive = true;
                             }
@@ -204,8 +202,8 @@ const Navbar = () => {
                                     to={link.to}
                                     onClick={(e) => handleNavigation(link.to, e)}
                                     className={`relative py-2 text-xs font-bold uppercase tracking-widest transition-colors ${scrolled
-                                            ? (isActive ? 'text-brand-brown' : 'text-brand-dark/70 hover:text-brand-dark')
-                                            : (isActive ? 'text-brand-tan' : 'text-white/80 hover:text-white')
+                                        ? (isActive ? 'text-brand-brown' : 'text-brand-dark/70 hover:text-brand-dark')
+                                        : (isActive ? 'text-brand-tan' : 'text-white/80 hover:text-white')
                                         }`}
                                 >
                                     {link.name}
@@ -280,7 +278,6 @@ const Navbar = () => {
                                                 let isActive = false;
                                                 if (location.pathname === '/') {
                                                     if (link.to === '/#home' && activeSection === 'home') isActive = true;
-                                                    if (link.to === '/#events' && activeSection === 'events') isActive = true;
                                                 } else {
                                                     if (location.pathname === link.to) isActive = true;
                                                 }

@@ -2,7 +2,7 @@ import React from 'react'
 import SEOHead from '../components/SEOHead'
 import Navbar from '../components/Navbar'
 import Herobanner from './Herobanner'
-import Events, { PartnerWithUs } from './Events'
+import { PartnerWithUs } from './Events'
 import AimMission from './AimMission'
 import ContactUs from './ContactUs'
 import AboutSummary from './AboutSummary'
@@ -23,7 +23,6 @@ const Home = () => {
       <AboutSummary />
       <AimMission />
       <HeritagePrograms />
-      <Events />
       <PartnerWithUs />
       <FAQ />
       <ContactUs />
